@@ -4,7 +4,7 @@ This is an attempt to demonstrate a plugin architecture, using the "String Calcu
 
 ## String Calculator Kata
 
-Original credits to (Roy Osherove)[http://osherove.com/tdd-kata-1]
+Original credits to [Roy Osherove](http://osherove.com/tdd-kata-1)
 
 ### Step 1: the simplest thing
 
