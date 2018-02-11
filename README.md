@@ -47,6 +47,18 @@ If there are multiple negatives, show all of them in the exception message.
 
 Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2
 
+## Interactive Console Program
+
+Now that you have your code working, you need to interact with it!
+
+Build a console application that allows interactive input and prints the result.
+
+Note the following:
+
+- How do we handle negative numbers now?
+- We now have to deal with user input like `asdf`. Where is this handled?
+- How do we input the custom delimiter at the command line anyways?
+
 ## Installation
 
 ...
