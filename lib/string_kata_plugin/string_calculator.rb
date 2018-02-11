@@ -4,15 +4,14 @@ module StringKataPlugin
 
     DELIMITER_PREFIX = "//"
 
-    def add(numbers)
-      return 0 if numbers.empty?
+    def add(calculation)
+      return 0 if calculation.empty?
 
-      delimiter, only_numbers = extract_delimiter(numbers)
+      delimiter, delimited_numbers = extract_delimiter(calculation)
 
-      only_numbers
-        .split(delimiter)
-        .map(&:to_i)
-        .reduce(0, &:+)
+      numbers = extract_numbers(delimited_numbers, delimiter)
+
+      sum(numbers)
     end
 
     def extract_delimiter(numbers)
@@ -31,6 +30,16 @@ module StringKataPlugin
       prefix_with_delimiter, only_numbers = numbers.split("\n")
 
       [prefix_with_delimiter.sub(DELIMITER_PREFIX, ""), only_numbers]
+    end
+
+    def extract_numbers(delimited_numbers, delimiter)
+      delimited_numbers
+        .split(delimiter)
+        .map(&:to_i)
+    end
+
+    def sum(numbers)
+      numbers.reduce(0, &:+)
     end
   end
 end
