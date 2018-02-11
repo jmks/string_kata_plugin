@@ -14,7 +14,13 @@ module StringKataPlugin
     end
 
     def extract_delimiter(numbers)
-      [/[,\s]/, numbers]
+      if numbers.start_with?("//")
+        prefix_with_delimiter, only_numbers = numbers.split("\n")
+
+        [prefix_with_delimiter.sub("//", ""), only_numbers]
+      else
+        [/[,\s]/, numbers]
+      end
     end
   end
 end

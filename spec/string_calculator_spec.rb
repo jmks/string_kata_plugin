@@ -24,7 +24,7 @@ module StringKataPlugin
         expect(StringCalculator.add("1\n2,3")).to be(6)
       end
 
-      xit "adds with a custom delimiter" do
+      it "adds with a custom delimiter" do
         expect(StringCalculator.add("//;\n4;2")).to be(6)
       end
     end
