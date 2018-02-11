@@ -28,17 +28,19 @@ module StringKataPlugin
         expect(StringCalculator.add("//;\n4;2")).to be(6)
       end
 
-      xcontext "with negative numbers" do
+      context "with negative numbers" do
         it "raises an exception" do
           expect do
             StringCalculator.add("1,4,-1")
           end.to raise_error(ArgumentError, "negatives not allowed: -1")
         end
 
-        it "includes the negative in the message"
-
-        context "with multiple negative numbers" do
-          it "show all the numbers in the message"
+        context "when there are multiple negative numbers" do
+          it "show all the numbers in the message" do
+            expect do
+              StringCalculator.add("-1,3,-2")
+            end.to raise_error(ArgumentError, "negatives not allowed: -1, -2")
+          end
         end
       end
     end

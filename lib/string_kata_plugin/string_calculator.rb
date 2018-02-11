@@ -11,6 +11,8 @@ module StringKataPlugin
 
       numbers = extract_numbers(delimited_numbers, delimiter)
 
+      validate_numbers!(numbers)
+
       sum(numbers)
     end
 
@@ -36,6 +38,12 @@ module StringKataPlugin
       delimited_numbers
         .split(delimiter)
         .map(&:to_i)
+    end
+
+    def validate_numbers!(numbers)
+      negatives = numbers.select { |e| e < 0 }
+
+      raise ArgumentError, "negatives not allowed: #{negatives.join(', ')}" if negatives.any?
     end
 
     def sum(numbers)
