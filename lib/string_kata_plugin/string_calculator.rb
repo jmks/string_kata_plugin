@@ -13,7 +13,9 @@ module StringKataPlugin
 
       validate_numbers!(numbers)
 
-      sum(numbers)
+      summable_numbers = numbers.select { |e| e <= 1000  }
+
+      sum(summable_numbers)
     end
 
     def extract_delimiter(numbers)

@@ -43,6 +43,13 @@ module StringKataPlugin
           end
         end
       end
+
+      context "when descriptoion includes big numbers" do
+        it "ignores the big numbers" do
+          expect(StringCalculator.add("1001,2")).to be(2)
+          expect(StringCalculator.add("1000,2")).to be(1002)
+        end
+      end
     end
   end
 end
