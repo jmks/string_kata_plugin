@@ -6,7 +6,7 @@ module StringKataPlugin
       return 0 if numbers.empty?
 
       numbers
-        .split(",")
+        .split(/[,\s]/)
         .map(&:to_i)
         .reduce(0, &:+)
     end

@@ -19,6 +19,10 @@ module StringKataPlugin
       it "adds many numbers" do
         expect(StringCalculator.add("1,2,3,4,5")).to be(15)
       end
+
+      it "adds numbers separated by a newline" do
+        expect(StringCalculator.add("1\n2,3")).to be(6)
+      end
     end
   end
 end

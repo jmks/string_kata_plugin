@@ -19,6 +19,12 @@ Create a simple String calculator with a method int add(String numbers).
 
 Allow the add() method to handle an unknown amount of numbers.
 
+### Step 3: handle new lines between numbers
+
+Allow the add() method to handle new lines between numbers (instead of commas).
+
+- the following input is ok: "1\n2,3" (will equal 6)
+
 ## Installation
 
 ...
