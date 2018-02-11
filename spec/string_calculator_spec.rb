@@ -15,6 +15,10 @@ module StringKataPlugin
         expect(StringCalculator.add("1,2")).to be(3)
         expect(StringCalculator.add("0,10")).to be(10)
       end
+
+      it "adds many numbers" do
+        expect(StringCalculator.add("1,2,3,4,5")).to be(15)
+      end
     end
   end
 end

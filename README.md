@@ -15,6 +15,10 @@ Create a simple String calculator with a method int add(String numbers).
 - Remember to solve things as simply as possible so that you force yourself to write tests you did not think about.
 - Remember to refactor after each passing test.
 
+### Step 2: handle an unknown amount of numbers
+
+Allow the add() method to handle an unknown amount of numbers.
+
 ## Installation
 
 ...
