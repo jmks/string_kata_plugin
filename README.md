@@ -1,38 +1,27 @@
-# StringKataPlugin
+# String Calculator Kata Plugin
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/string_kata_plugin`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is an attempt to demonstrate a plugin architecture, using the "String Calculator" kata.
 
-TODO: Delete this and the text above, and describe your gem
+## String Calculator Kata
+
+Original credits to (Roy Osherove)[http://osherove.com/tdd-kata-1]
+
+### Step 1: the simplest thing
+
+Create a simple String calculator with a method int add(String numbers).
+
+- The string argument can contain 0, 1 or 2 numbers, and will return their sum (for an empty string it will return 0) for example "" or "1" or "1,2".
+- Start with the simplest test case of an empty string and move to 1 and two numbers.
+- Remember to solve things as simply as possible so that you force yourself to write tests you did not think about.
+- Remember to refactor after each passing test.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'string_kata_plugin'
-```
+...
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install string_kata_plugin
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/string_kata_plugin.
 
 ## License
 
