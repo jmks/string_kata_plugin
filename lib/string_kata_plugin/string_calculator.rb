@@ -43,7 +43,13 @@ module StringKataPlugin
     def validate_numbers!(numbers)
       negatives = numbers.select { |e| e < 0 }
 
-      raise ArgumentError, "negatives not allowed: #{negatives.join(', ')}" if negatives.any?
+      negatives_detected!(negatives) if negatives.any?
+    end
+
+    def negatives_detected!(negatives)
+      message = "negatives not allowed: #{negatives.join(', ')}"
+
+      raise ArgumentError, message
     end
 
     def sum(numbers)
