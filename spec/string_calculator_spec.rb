@@ -23,6 +23,10 @@ module StringKataPlugin
       it "adds numbers separated by a newline" do
         expect(StringCalculator.add("1\n2,3")).to be(6)
       end
+
+      xit "adds with a custom delimiter" do
+        expect(StringCalculator.add("//;\n4;2")).to be(6)
+      end
     end
   end
 end

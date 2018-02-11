@@ -25,6 +25,16 @@ Allow the add() method to handle new lines between numbers (instead of commas).
 
 - the following input is ok: "1\n2,3" (will equal 6)
 
+### Step 4: support different delimiters
+
+Support different delimiters: to change a delimiter, the beginning of the string will contain a separate line that looks like this:
+
+"//[delimiter]\n[numbers...]"
+
+For example "//;\n1;2" should return 3 where the default delimiter is ';'.
+
+The first line is optional. All existing scenarios should still be supported.
+
 ## Installation
 
 ...
